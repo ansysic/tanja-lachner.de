@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heilmassage Tanja Lachner | Wellnessstadt</title>
+  <meta name="description"
+    content="Professionelle Heilmassage in Wellnessstadt - Tanja Lachner. Jetzt Termin vereinbaren!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#3a3334', // Dark brown
+              light: '#6d5e58',
+              dark: '#252121'
+            },
+            secondary: {
+              DEFAULT: '#d1d0ce', // Light gray/silver
+              dark: '#a08d82'
+            },
+            accent: {
+              DEFAULT: '#6d5e58', // Medium brown
+              light: '#a08d82'
+            }
+          },
+          fontFamily: {
+            'serif': ['"Playfair Display"', 'serif'],
+            'sans': ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      /* font-family: 'Playfair Display', serif; */
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 0; /* Removed border radius */
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:focus {
+      outline: none;
+      box-shadow: none; /* Removed box shadow */
+    }
+
+    .btn-primary {
+      background-color: #252121;
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #3a3334;
+      box-shadow: none; /* Removed box shadow */
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #6d5e58;
+      border: 1px solid rgba(109, 94, 88, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 1);
+      border-color: #6d5e58;
+      box-shadow: none; /* Removed box shadow */
+    }
+  </style>
+</head>
+
+<body class="bg-secondary font-sans text-gray-800 antialiased" style="font-family: 'Montserrat', sans-serif;">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm py-4">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="flex items-center">
+        <div class="relative">
+          <a href="index.html" class="block hover:opacity-80 transition-opacity">
+            <div class="border p-3" style="border-color: black;">
+              <span class="font-serif text-xl font-medium" style="color: black;">T.L.</span>
+            </div>
+          </a>
+        </div>
+        <div class="ml-4 font-serif text-sm md:text-base" style="color: black;">
+          Lösen von Energieblockaden
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-16 sm:py-24"
+      style="background: linear-gradient(to bottom, #E8DFC9, #F5F0E6); position: relative;">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+          <!-- Profile Image -->
+          <div class="mb-8">
+            <div class="relative h-32 w-32 overflow-hidden rounded-full shadow-lg">
+              <img src="img/profilepic.jpeg" alt="Tanja Lachner - Zertifizierte Massagetherapeutin"
+                class="h-full w-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Text Content -->
+          <div class="text-left">
+            <p class="font-serif mt-3 text-xl font-semibold text-accent">
+              Tanja Lachner
+            </p>
+            <h1 class="font-serif text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
+              Damit Körper, Geist und Energie wieder fließen.
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-700">
+              Der Körper trägt unsere Geschichte in sich. Stress, Fehlhaltungen und emotionale Konflikte hinterlassen
+              ihre Spuren – oft als innere Unruhe, Verspannungen oder Energielosigkeit spürbar. Die ganzheitlichen
+              Massagen von Tanja Lachner lösen sanft und intuitiv diese Energieblockaden, damit Körper, Geist und
+              Energie wieder natürlich fließen können. </p>
+            <!-- CTA Buttons -->
+            <div class="mt-10 flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
+              <a href="#contact" class="btn btn-primary">
+                Termin vereinbaren
+              </a>
+              <a href="#services" class="btn btn-secondary">
+                Leistungen entdecken
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Decorative background elements -->
+      <div class="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
+        <div class="aspect-[1404/767] w-[87.75rem]"
+          style="background: linear-gradient(to right, #A67C52, #D87D62); opacity: 0.3;"></div>
+      </div>
+      <div class="absolute -bottom-24 left-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
+        <div class="aspect-[1404/767] w-[87.75rem]"
+          style="background: linear-gradient(to right, #D87D62, #A67C52); opacity: 0.3;"></div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
