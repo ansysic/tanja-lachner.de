@@ -19,8 +19,8 @@
     width: 100%;
     height: 100%;
     background: 
-      radial-gradient(circle 200px at 10% 15%, #c5b8ff, #ffffff00),
-      radial-gradient(circle 200px at 20% 25%, #cbf9cf, #ffffff00),
+      radial-gradient(circle 200px at 10% 15%, #b8b8ff, #ffffff00),
+      radial-gradient(circle 200px at 20% 25%, #7d7eb0, #ffffff00),
       #FFFFFF;
     filter: blur(20px);
     z-index: -1;
