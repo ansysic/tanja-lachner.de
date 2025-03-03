@@ -111,18 +111,17 @@
 
   <main class="min-h-screen">
     <!-- Hero Section -->
-    <section class="relative overflow-hidden py-16 sm:py-24"
+    <section class="relative overflow-hidden py-16 sm:py-24 lg:pb-32"
       style="background: linear-gradient(to bottom, #E8DFC9, #F5F0E6); position: relative;">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+        <div class="flex flex-col md:flex-row items-center gap-12">
           <!-- Profile Image -->
-          <div class="mb-8">
-            <div class="relative h-32 w-32 overflow-hidden rounded-full shadow-lg">
+          <div class="mb-8 md:mb-0 flex-shrink-0">
+            <div class="relative h-40 w-40 overflow-hidden rounded-full shadow-lg">
               <img src="img/profilepic.jpeg" alt="Tanja Lachner - Zertifizierte Massagetherapeutin"
                 class="h-full w-full object-cover" />
             </div>
           </div>
-
           <!-- Text Content -->
           <div class="text-left">
             <p class="font-serif mt-3 text-xl font-semibold text-accent">
@@ -136,7 +135,8 @@
               ihre Spuren – oft spürbar als innere Unruhe, Verspannungen oder Energielosigkeit.
               Mit meiner ganzheitlichen Massage helfe ich Ihnen, diese Energieblockaden sanft und intuitiv zu lösen. So
               können Körper, Geist und Energie wieder frei fließen. Ich freue mich darauf, Sie auf Ihrem Weg zu
-              begleiten. </p>
+              begleiten.
+            </p>
             <!-- CTA Buttons -->
             <div class="mt-10 flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
               <a href="#contact" class="btn btn-primary">
@@ -149,8 +149,6 @@
           </div>
         </div>
       </div>
-      </div>
-
       <!-- Decorative background elements -->
       <div class="absolute -top-24 right-0 -z-10 transform-gpu blur-3xl" aria-hidden="true">
         <div class="aspect-[1404/767] w-[87.75rem]"
@@ -162,103 +160,80 @@
       </div>
     </section>
 
-
     <!-- Services Section -->
-    <section class="py-16 sm:py-24 bg-gradient-to-b from-[#F5F0E6] to-[#E8DFC9]">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-primary mb-12 tracking-tight">
-          Wege zur Balance
-        </h2>
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-
-          <!-- Service 1 -->
-          <div
-            class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
-            <div class="flex items-center mb-4">
-              <!-- Icon container -->
-              <div class="flex justify-center items-center w-12 h-12 mr-4 rounded-full bg-accent-light bg-opacity-10">
-                <i class="ph ph-waves text-accent-light text-2xl"></i>
-              </div>
-              <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
-                Lösen von Energieblockaden
-              </h3>
-            </div>
-            <div class="w-12 h-px bg-accent-light opacity-50 my-4"></div>
-            <p class="text-gray-800 leading-7">
-              Ihr Alltag hinterlässt Spuren – körperlich, emotional, energetisch. Gemeinsam erkennen wir Blockaden,
-              lösen Verspannungen und öffnen achtsam Wege für neue Lebenskraft und innere Ruhe.
-            </p>
+<!-- Services Section -->
+<section class="py-16 sm:py-24" id="services">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Divider -->
+    <div class="w-24 h-px bg-accent-light opacity-50 mx-auto mb-12"></div>
+    <h2 class="font-serif text-3xl md:text-4xl font-bold text-center text-primary mb-12 tracking-tight">
+      Wege zur Balance
+    </h2>
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+      <!-- Service 1 -->
+      <div class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
+        <div class="flex items-center mb-6">
+          <div class="flex justify-center items-center w-16 h-16 mr-6 rounded-full bg-accent">
+            <i class="ph ph-waves text-white text-3xl"></i>
           </div>
-
-          <!-- Service 2 -->
-          <div
-            class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
-            <div class="flex items-center mb-4">
-              <!-- Icon container -->
-              <div class="flex justify-center items-center w-12 h-12 mr-4 rounded-full bg-accent-light bg-opacity-10">
-                <i class="ph ph-person text-accent-light text-2xl"></i>
-              </div>
-              <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
-                Ganzheitlich und individuell
-              </h3>
-            </div>
-            <div class="w-12 h-px bg-accent-light opacity-50 my-4"></div>
-            <p class="text-gray-800 leading-7">
-              Kein Mensch gleicht dem anderen. Deshalb sind alle meine Massagen individuell und ganzheitlich: Sensibel
-              abgestimmt auf Ihre persönliche Geschichte, Bedürfnisse und Ihr einzigartiges Körpergefühl.
-            </p>
-          </div>
-
-          <!-- Service 3 -->
-          <div
-            class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
-            <div class="flex items-center mb-4">
-              <!-- Icon container -->
-              <div class="flex justify-center items-center w-12 h-12 mr-4 rounded-full bg-accent-light bg-opacity-10">
-                <i class="ph ph-scales text-accent-light text-2xl"></i>
-              </div>
-              <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
-                Nachhaltige Balance im Alltag
-              </h3>
-            </div>
-            <div class="w-12 h-px bg-accent-light opacity-50 my-4"></div>
-            <p class="text-gray-800 leading-7">
-              Chronischer Stress, Fehlhaltungen, zwischenmenschliche Spannungen – gerade moderne Belastungen brauchen
-              achtsame Lösungen. Ich unterstütze Sie dabei, nachhaltig zurück zu Balance, innerer Klarheit und
-              körperlicher Vitalität zu finden.
-            </p>
-          </div>
-
-          <!-- Service 4 -->
-          <div
-            class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
-            <div class="flex items-center mb-4">
-              <!-- Icon container -->
-              <div class="flex justify-center items-center w-12 h-12 mr-4 rounded-full bg-accent-light bg-opacity-10">
-                <i class="ph ph-flower-lotus text-accent-light text-2xl"></i>
-              </div>
-              <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
-                Raum für Ruhe und Regeneration
-              </h3>
-            </div>
-            <div class="w-12 h-px bg-accent-light opacity-50 my-4"></div>
-            <p class="text-gray-800 leading-7">
-              Häufig fehlt im Alltag der Freiraum, die eigenen Bedürfnisse zu fühlen. Meine Massage bietet genau diesen
-              Raum: Atmen Sie tief durch, kommen Sie zur Ruhe und erleben Sie, wie sich Körper und Geist regenerieren.
-            </p>
-          </div>
-
+          <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
+            Lösen von Energieblockaden
+          </h3>
         </div>
+        <div class="w-12 h-px bg-accent-light opacity-50 my-6"></div>
+        <p class="text-gray-800 leading-7">
+          Ihr Alltag hinterlässt Spuren – körperlich, emotional, energetisch. Gemeinsam erkennen wir Blockaden, lösen Verspannungen und öffnen achtsam Wege für neue Lebenskraft und innere Ruhe.
+        </p>
       </div>
-    </section>
+      <!-- Service 2 -->
+      <div class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
+        <div class="flex items-center mb-6">
+          <div class="flex justify-center items-center w-16 h-16 mr-6 rounded-full bg-accent">
+            <i class="ph ph-hand-heart text-white text-3xl"></i>
+          </div>
+          <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
+            Ganzheitlich und individuell
+          </h3>
+        </div>
+        <div class="w-12 h-px bg-accent-light opacity-50 my-6"></div>
+        <p class="text-gray-800 leading-7">
+          Kein Mensch gleicht dem anderen. Deshalb sind alle meine Massagen individuell und ganzheitlich: Sensibel abgestimmt auf Ihre persönliche Geschichte, Bedürfnisse und Ihr einzigartiges Körpergefühl.
+        </p>
+      </div>
+      <!-- Service 3 -->
+      <div class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
+        <div class="flex items-center mb-6">
+          <div class="flex justify-center items-center w-16 h-16 mr-6 rounded-full bg-accent">
+            <i class="ph ph-leaf text-white text-3xl"></i>
+          </div>
+          <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
+            Nachhaltige Balance im Alltag
+          </h3>
+        </div>
+        <div class="w-12 h-px bg-accent-light opacity-50 my-6"></div>
+        <p class="text-gray-800 leading-7">
+          Chronischer Stress, Fehlhaltungen, zwischenmenschliche Spannungen – gerade moderne Belastungen brauchen achtsame Lösungen. Ich unterstütze Sie dabei, nachhaltig zurück zu Balance, innerer Klarheit und körperlicher Vitalität zu finden.
+        </p>
+      </div>
+      <!-- Service 4 -->
+      <div class="bg-[#F5F0E6] p-6 md:p-8 border border-accent-light border-opacity-20 hover:scale-[1.02] hover:opacity-95 transition duration-300 ease-in-out">
+        <div class="flex items-center mb-6">
+          <div class="flex justify-center items-center w-16 h-16 mr-6 rounded-full bg-black">
+            <i class="ph ph-flower-lotus text-white text-3xl"></i>
+          </div>
+          <h3 class="font-serif text-xl md:text-2xl font-medium text-accent tracking-tight">
+            Raum für Ruhe und Regeneration
+          </h3>
+        </div>
+        <div class="w-12 h-px bg-accent-light opacity-50 my-6"></div>
+        <p class="text-gray-800 leading-7">
+          Häufig fehlt im Alltag der Freiraum, die eigenen Bedürfnisse zu fühlen. Meine Massage bietet genau diesen Raum: Atmen Sie tief durch, kommen Sie zur Ruhe und erleben Sie, wie sich Körper und Geist regenerieren.
+        </p>
+      </div>
     </div>
-
-    <!-- Decorative background elements -->
-    <div class="absolute right-0 -z-10 transform-gpu blur-3xl opacity-20" aria-hidden="true">
-      <div class="aspect-[1404/767] w-[50rem]" style="background: linear-gradient(to right, #A67C52, #D87D62);"></div>
-    </div>
-    </section>
+  </div>
+</section>
   </main>
 </body>
 
