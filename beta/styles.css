@@ -1,0 +1,11 @@
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.letter-spacing {
+  letter-spacing: 0.05em;
+}
