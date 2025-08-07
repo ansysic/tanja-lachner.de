@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; frame-src https://www.google.com https://www.google.de; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
   <title>Heilmassage Tanja Lachner | Wellnessstadt</title>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,25 +21,30 @@
 </head>
 
 <body class="font-sans">
+  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
   <!-- Navbar -->
-  <nav class="bg-white py-4">
+  <nav class="bg-white py-3 sticky-top border-bottom">
     <div class="container">
       <div class="d-flex align-items-center">
-        <div>
+        <div class="d-flex align-items-center">
           <a href="index.html" class="d-block text-decoration-none">
             <div class="border border-dark p-2">
               <span class="font-serif fs-4 fw-medium letter-spacing text-dark">TL</span>
             </div>
           </a>
+          <div class="ms-3 font-serif text-dark">
+            Lösen von Energieblockaden
+          </div>
         </div>
-        <div class="ms-3 font-serif text-dark">
-          Lösen von Energieblockaden
-        </div>
+        <ul class="nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-dark" href="#services">Wege zur Balance</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#contact">Kontakt</a></li>
+        </ul>
       </div>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <!-- Hero Section -->
     <section class="py-5 py-md-6 position-relative" style="min-height: 500px;">
       <div class="hero-background"></div>
@@ -48,13 +55,13 @@
             <!-- Existing content: profile image, text, and buttons remain unchanged -->
             <div class="mb-4">
               <div style="width: 160px; height: 160px;">
-                <img src="img/profilepic.webp" alt="Tanja Lachner - Zertifizierte Massagetherapeutin"
+                <img src="img/profilepic.webp" alt="Tanja Lachner - Zertifizierte Massagetherapeutin" width="160" height="160" decoding="async" fetchpriority="high" loading="eager"
                   class="rounded-circle img-fluid shadow" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
             </div>
             <p class="font-serif fs-5 fw-semibold mb-2">Tanja Lachner</p>
             <h1 class="font-serif display-5 fw-bold">Damit Körper, Geist und Energie wieder fließen.</h1>
-            <p class="mt-4 fs-5">
+            <p class="mt-4 fs-5 measure">
               Jedes Gefühl hinterlässt eine Spur im Körper. Stress, Sorgen oder alte Emotionen können zu innerer
               Anspannung führen und blockieren dabei die natürliche Lebensenergie. Hier ist ein Raum entstanden, in dem
               diese Blockaden sanft gelöst werden – einfach, achtsam und wirksam. In einem geschützten Umfeld entsteht
@@ -70,7 +77,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-5 py-md-6" id="services">
+    <section class="py-5 py-md-6 section cv-auto" id="services">
       <div class="container">
         <!-- Divider -->
         <hr class="w-25 mx-auto mb-4">
@@ -156,7 +163,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-5 py-md-6 bg-light" id="contact">
+    <section class="py-5 py-md-6 bg-light section cv-auto" id="contact">
       <div class="container">
         <!-- Divider -->
         <hr class="w-25 mx-auto mb-4">
@@ -175,8 +182,8 @@
                 <p class="text-muted mb-3">Humanenergetik<br>Energetische Körperarbeit</p>
                 <hr class="mb-3">
                 <address class="mb-4">
-                  <p>Innere Brucker Str. 119<br>
-                    91054 Erlangen</p>
+                  <p><a href="https://www.google.com/maps?q=Innere+Brucker+Str.+119,+91054+Erlangen" target="_blank" rel="noopener" class="text-reset text-decoration-underline">Innere Brucker Str. 119<br>
+                    91054 Erlangen</a></p>
                   <p>Physiopraxis Viola<br>
                     2. Stock</p>
                   <p>Telefon: <a href="tel:+4915141442788">+49 1514 1442788</a></p>
@@ -190,18 +197,23 @@
           </div>
 
           <div class="col-md-6">
-            <!-- Google Maps -->
-            <div class="ratio ratio-4x3 h-100">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.55044151406!2d11.000831777623873!3d49.594968871441566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1f8dd8ae0fb1b%3A0xa33b6ceee477d04!2sPhysio%20Violia%20GmbH!5e1!3m2!1sde!2sde!4v1741040290689!5m2!1sde!2sde"
-                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                class="border"></iframe>
+            <!-- Google Maps (Two-click) -->
+            <div class="ratio ratio-4x3 h-100" id="map-container">
+              <div id="map-placeholder" class="border d-flex align-items-center justify-content-center text-center p-3">
+                <div>
+                  <p class="mb-2">Zum Schutz Ihrer Daten wird Google Maps erst nach Ihrer Zustimmung geladen.</p>
+                  <button id="load-map" class="btn btn-secondary-custom">Karte laden</button>
+                  <p class="small mt-2"><a href="datenschutz.html" class="text-decoration-underline">Mehr erfahren</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <button class="btn btn-primary-custom back-to-top" type="button" aria-label="Nach oben" title="Nach oben">↑</button>
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-4 mt-5">
@@ -211,8 +223,8 @@
           <p class="mb-0">© 2025</p>
         </div>
         <div class="col-md-6 text-md-end">
-          <a href="#" class="text-white text-decoration-none me-3">Impressum</a>
-          <a href="#" class="text-white text-decoration-none me-3">Datenschutz</a>
+          <a href="impressum.html" class="text-white text-decoration-none me-3">Impressum</a>
+          <a href="datenschutz.html" class="text-white text-decoration-none me-3">Datenschutz</a>
         </div>
       </div>
     </div>
@@ -222,6 +234,52 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script>
+    (() => {
+      const backToTop = document.querySelector('.back-to-top');
+      if (!backToTop) return;
+
+      const onScroll = () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      backToTop.addEventListener('click', () => {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+      });
+
+      // Two-click Google Maps
+      const loadMapBtn = document.getElementById('load-map');
+      if (loadMapBtn) {
+        loadMapBtn.addEventListener('click', () => {
+          const iframe = document.createElement('iframe');
+          iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.55044151406!2d11.000831777623873!3d49.594968871441566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1f8dd8ae0fb1b%3A0xa33b6ceee477d04!2sPhysio%20Violia%20GmbH!5e1!3m2!1sde!2sde!4v1741040290689!5m2!1sde!2sde";
+          iframe.style.border = "0";
+          iframe.loading = "lazy";
+          iframe.referrerPolicy = "no-referrer-when-downgrade";
+          iframe.className = "border";
+          const container = document.getElementById('map-container');
+          if (container) {
+            container.innerHTML = "";
+            container.appendChild(iframe);
+          }
+          try { localStorage.setItem('consented-maps', '1'); } catch (e) {}
+        });
+        try {
+          if (localStorage.getItem('consented-maps') === '1') {
+            loadMapBtn.click();
+          }
+        } catch (e) {}
+      }
+    })();
+  </script>
 </body>
 
 </html>

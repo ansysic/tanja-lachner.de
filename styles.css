@@ -1,49 +1,122 @@
-/* Existing Styles from Your HTML */
+/* Design tokens and base */
+:root {
+  --header-h: 72px;
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-accent: #7d7eb0;
+  --color-border: #eaeaea;
+  --radius-card: 12px;
+  --radius-btn: 8px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-h: 80px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  z-index: 2000;
+}
+
+/* Typography utilities */
 .font-serif {
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .font-sans {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .letter-spacing {
-    letter-spacing: 0.05em;
-  }
-  
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.letter-spacing {
+  letter-spacing: 0.05em;
+}
+
+/* Responsive type scale */
+h1 {
+  font-size: clamp(2rem, 3vw + 1rem, 3.25rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 2.2vw + 0.7rem, 2.25rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 1.4vw + 0.6rem, 1.5rem);
+}
+p,
+li {
+  font-size: clamp(1rem, 0.4vw + 0.95rem, 1.1rem);
+}
+
+/* Comfortable measure for long text */
+.measure {
+  max-width: 65ch;
+}
+
+/* Anchor offset for sticky header */
+.section {
+  scroll-margin-top: var(--header-h);
+}
+
 /* Hero Section Background with Subtle Gradient Blobs */
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-      radial-gradient(circle 200px at 10% 15%, #b8b8ff, #ffffff00),
-      radial-gradient(circle 200px at 20% 25%, #7d7eb0, #ffffff00),
-      #FFFFFF;
-    filter: blur(20px);
-    z-index: -1;
-  }
-  
-  /* Noise Overlay */
-  .noise-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('img/noise.png') repeat;
-    opacity: 0.1;
-    z-index: 0;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle 200px at 10% 15%, #b8b8ff, #ffffff00),
+    radial-gradient(circle 200px at 20% 25%, #7d7eb0, #ffffff00),
+    #FFFFFF;
+  filter: blur(16px);
+  z-index: -1;
+}
+
+/* Noise Overlay */
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/noise.png') repeat;
+  opacity: 0.06;
+  z-index: 0;
+}
+
 /* Hero Content */
 .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-  
+  position: relative;
+  z-index: 1;
+}
+
 /* Custom Button Styles */
 .btn-primary-custom {
   background-color: #000;
@@ -52,10 +125,12 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-btn);
   transition: all 0.3s ease;
 }
 
-.btn-primary-custom:hover, .btn-primary-custom:focus {
+.btn-primary-custom:hover,
+.btn-primary-custom:focus {
   background-color: #333;
   border-color: #333;
   color: #fff;
@@ -68,11 +143,67 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-btn);
   transition: all 0.3s ease;
 }
 
-.btn-secondary-custom:hover, .btn-secondary-custom:focus {
+.btn-secondary-custom:hover,
+.btn-secondary-custom:focus {
   background-color: rgba(0, 0, 0, 0.05);
   color: #333;
   border-color: #333;
+}
+
+/* Focus styles (accessible) */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+/* Card micro-interactions */
+.card {
+  border-radius: var(--radius-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1040;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Performance: fold skipping for below-the-fold sections */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
