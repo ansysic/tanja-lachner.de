@@ -29,10 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     loadMapBtn.addEventListener('click', () => {
       const iframe = document.createElement('iframe');
       iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.55044151406!2d11.000831777623873!3d49.594968871441566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1f8dd8ae0fb1b%3A0xa33b6ceee477d04!2sPhysio%20Violia%20GmbH!5e1!3m2!1sde!2sde!4v1741040290689!5m2!1sde!2sde";
-      iframe.style.border = "0";
       iframe.loading = "lazy";
-      iframe.referrerPolicy = "no-referrer-when-downgrade";
-      iframe.className = "border";
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.className = "w-100 h-100 border-0";
       const container = document.getElementById('map-container');
       if (container) {
         container.innerHTML = "";

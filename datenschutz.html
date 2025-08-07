@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self' data:; frame-src https://www.google.com https://www.google.de; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; font-src 'self' data:; frame-src https://www.google.com https://www.google.de; base-uri 'self'; form-action 'self'; object-src 'none'; connect-src 'self'; upgrade-insecure-requests">
   <title>Datenschutzerklärung | Heilmassage Tanja Lachner</title>
   <!-- Local Bootstrap CSS -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -65,7 +65,7 @@
                   Beim Aufruf unserer Seiten werden durch GitHub/Fastly Server‑Logdaten (z. B. IP‑Adresse, Datum/Uhrzeit des Zugriffs,
                   URL, Referrer, User‑Agent) verarbeitet, um die Website auszuliefern und die Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO).
                   Die Speicherdauer der Logfiles wird vom Anbieter festgelegt. Weitere Informationen:
-                  <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+                  <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.
                 </p>
 
                 <h2 class="h4 font-serif fw-medium mb-2">3. Kontaktaufnahme</h2>
@@ -93,8 +93,8 @@
                   Standortes (Art. 6 Abs. 1 lit. f DSGVO). Die Karte wird erst nach Ihrer aktiven Zustimmung geladen (Zwei‑Klick‑Lösung).
                 </p>
                 <p class="mb-3">
-                  Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>,
-                  <a href="https://policies.google.com/terms?hl=de" target="_blank" rel="noopener">Nutzungsbedingungen</a>.
+                  Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>,
+                  <a href="https://policies.google.com/terms?hl=de" target="_blank" rel="noopener noreferrer">Nutzungsbedingungen</a>.
                 </p>
 
                 <h3 class="h6 fw-semibold mb-1">Schriftarten (lokal) und Bootstrap (lokal)</h3>
@@ -153,7 +153,7 @@
                 <p class="mb-1">Telefon: <a href="tel:+4915141442788" class="text-reset">+49 1514 1442788</a></p>
                 <p class="mb-0">E‑Mail: <span class="text-muted">bitte einsetzen</span></p>
                 <hr class="my-4">
-                <p class="text-muted mb-0">Stand: <script>document.write(new Date().toLocaleDateString('de-DE'));</script></p>
+                <p class="text-muted mb-0">Stand: <span class="js-date"></span></p>
               </div>
             </div>
           </div>
